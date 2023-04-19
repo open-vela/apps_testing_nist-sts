@@ -38,7 +38,7 @@ DiscreteFourierTransform(int n)
 	
 	m[0] = sqrt(X[0]*X[0]);	    /* COMPUTE MAGNITUDE */
 	
-	for ( i=0; i<n/2; i++ )
+	for ( i=0; i<n/2-1; i++ )
 		m[i+1] = sqrt(pow(X[2*i+1],2)+pow(X[2*i+2],2)); 
 	count = 0;				       /* CONFIDENCE INTERVAL */
 	upperBound = sqrt(2.995732274*n);

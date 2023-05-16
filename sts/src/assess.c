@@ -84,10 +84,14 @@ main(int argc, char *argv[])
 	invokeTestSuite(option, streamFile);
 	fclose(freqfp);
 	for( i=1; i<=NUMOFTESTS; i++ ) {
-		if ( stats[i] != NULL )
+		if ( stats[i] != NULL ) {
 			fclose(stats[i]);
-		if ( results[i] != NULL )
+			stats[i] = NULL;
+		}
+		if ( results[i] != NULL ) {
 			fclose(results[i]);
+			results[i] = NULL;
+		}
 	}
 	if ( (testVector[0] == 1) || (testVector[TEST_CUSUM] == 1) ) 
 		partitionResultFile(2, tp.numOfBitStreams, option, TEST_CUSUM);

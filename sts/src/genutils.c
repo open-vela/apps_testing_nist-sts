@@ -11,6 +11,13 @@
 
 #define	MAXPLEN		384
 
+static int	greater(BYTE *x, BYTE *y, int l);
+static int	less(BYTE *x, BYTE *y, int l);
+static void	Square(BYTE *A, BYTE *B, int L);
+static int	DivMod(BYTE *x, int lenx, BYTE *n, int lenn, BYTE *quot, BYTE *rem);
+static void	Mod(BYTE *x, int lenx, BYTE *n, int lenn);
+static void	sub(BYTE *A, int LA, BYTE *B, int LB);
+static int	negate(BYTE *A, int L);
 
 /*****************************************
 ** greater - Test if x > y               *

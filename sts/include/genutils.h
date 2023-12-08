@@ -25,21 +25,14 @@ typedef struct _MP_struct {
 /*
  * Function Declarations
  */
-int		greater(BYTE *x, BYTE *y, int l);
-int		less(BYTE *x, BYTE *y, int l);
 BYTE	bshl(BYTE *x, int l);
 void	bshr(BYTE *x, int l);
 int		Mult(BYTE *A, BYTE *B, int LB, BYTE *C, int LC);
 void	ModSqr(BYTE *A, BYTE *B, int LB, BYTE *M, int LM);
 void	ModMult(BYTE *A, BYTE *B, int LB, BYTE *C, int LC, BYTE *M, int LM);
 void	smult(BYTE *A, BYTE b, BYTE *C, int L);
-void	Square(BYTE *A, BYTE *B, int L);
 void	ModExp(BYTE *A, BYTE *B, int LB, BYTE *C, int LC, BYTE *M, int LM);
-int		DivMod(BYTE *x, int lenx, BYTE *n, int lenn, BYTE *quot, BYTE *rem);
-void	Mod(BYTE *x, int lenx, BYTE *n, int lenn);
 void	Div(BYTE *x, int lenx, BYTE *n, int lenn);
-void	sub(BYTE *A, int LA, BYTE *B, int LB);
-int		negate(BYTE *A, int L);
 BYTE	add(BYTE *A, int LA, BYTE *B, int LB);
 void	prettyprintBstr(char *S, BYTE *A, int L);
 void	byteReverse(ULONG *buffer, int byteCount);
